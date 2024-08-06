@@ -1,0 +1,121 @@
+GET http://localhost:3002/getUsers
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.c2FyYW4uYWwyMkBiaXRzYXRoeS5hYy5pbg.GXjmZ_DILEG5z1lJ_pHbpetJPRTBcNz1WeWmcPD9uK8
+
+###
+POST http://localhost:3002/getUsers
+Content-Type: application/json
+
+{
+    "email": "faculty@bitsathy.ac.in"
+}
+
+###
+
+GET  http://localhost:3002/Faculty
+
+###
+
+POST  http://localhost:3002/verifyToken
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhcmFuLmFsMjJAYml0c2F0aHkuYWMuaW4iLCJpYXQiOjE2OTc2MTY3MzEsImV4cCI6MTY5NzYyMDMzMX0.Ykl4L8l-WTszVWhWxrtjlR3rjLlTpKxQdmgmH6-nRlk"
+}
+
+###
+POST http://localhost:3002/newInvoice
+Content-Type: application/json
+
+{
+  "activeDetail": "['saran.al22@bitsathy.ac.in':'Saran','email':'hello@bitsathy.ac.in']",
+  "selectedDate": "hello",
+  "projectName": "Sample Project",
+  "projectDescription": "This is a sample project description",
+  "projectTac": "Sample TAC",
+  "facultyName": "John Doe",
+  "preferredTime": "how are you",
+  "fields":"Value",
+  "isInputEnabled": "true",
+  "status": "Proposed"
+}
+
+###
+POST http://localhost:3002/withdraw
+Content-Type: application/json
+  
+  {
+    "id": "652e6b38fab1ce3067112170"
+  }
+
+###
+POST http://localhost:3002/withdrawn
+
+### 
+POST http://localhost:3002/Rejecte
+Content-Type: application/json
+
+{
+  "id": "652e6b38fab1ce3067112170"
+}
+
+###
+GET  http://localhost:3002/user-search
+Content-Type: application/json
+
+{
+  "q": "abc"
+}
+
+###
+curl -X GET "http://localhost:3002/user-search" -H "Content-Type: application/json" -d '{"q": "abc"}'
+
+
+###
+GET  http://localhost:3002/user-search
+
+Content-Type: application/json
+
+{
+    "q": "searchTerm"
+}
+
+
+###
+POST http://localhost:3002/withdrawn  
+Content-Type: application/json
+
+{
+  "withdrawn": "=====================abc================="
+}
+
+###
+POST  http://localhost:3002/counter
+
+###
+POST  http://localhost:3002/test-invoice
+
+###
+POST http://localhost:3002/dashboard-data
+
+###
+POST http://localhost:3002/dashboard
+Content-Type: application/json
+
+{
+  "date": "2023-12-04T12:30:45.678Z",
+  "month" : "12",
+  "year" : "2023"
+}
+
+###
+POST http://localhost:3002/dashboard-count
+
+###
+POST http://localhost:3002/overall-count
+Content-Type: application/json
+
+{
+  "startDate" : "2023-01-01T12:00:00Z",
+  "endDate" : "2023-12-31T12:00:00Z",
+  "status" : "Proposed"
+}
