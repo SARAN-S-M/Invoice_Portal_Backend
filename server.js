@@ -11,7 +11,7 @@ const port = process.env.PORT;
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://invoice-portal-frontend.vercel.app'],
     methods: ['GET', 'POST', 'PUT'],
     credentials: false,
 }));
